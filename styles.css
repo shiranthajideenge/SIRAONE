@@ -41,7 +41,6 @@ header {
     font-family: 'Dancing Script', cursive;
 }
 
-
 header .container {
     display: flex;
     justify-content: space-between;
