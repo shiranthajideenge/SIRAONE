@@ -161,7 +161,7 @@ async function sendMessage() {
             }
         } catch (error) {
             console.error("Error:", error);
-            displayMessage("There was an error connecting to the bot.", "bot");
+            displayMessage("Sorry I am off line", "bot");
         }
     }
 }
