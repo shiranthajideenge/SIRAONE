@@ -29,6 +29,19 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* For a web-safe cursive font */
+.about-us {
+    font-family: cursive;
+}
+
+/* Alternatively, if you want to use a custom Google font */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+.about-us {
+    font-family: 'Dancing Script', cursive;
+}
+
+
 header .container {
     display: flex;
     justify-content: space-between;
@@ -326,3 +339,161 @@ footer a:hover {
         font-size: 12px;
     }
 }
+/* Chatbot Styles */
+/* Chatbot Styles */
+.chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Floating Chat Icon */
+.floating-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #0078ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.floating-icon img {
+    width: 35px;
+    height: 35px;
+}
+
+/* Chatbox Styles */
+/* Floating Chat Icon */
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.chat-icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Chat Container */
+.chat-container {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    flex-direction: column;
+}
+
+.chat-container.visible {
+    display: flex;
+}
+
+.chat-box {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.message {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.message .avatar {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.message .avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.message .text {
+    background: #f1f1f1;
+    border-radius: 10px;
+    padding: 8px 12px;
+    max-width: 200px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.message.user .text {
+    background: #d1f7c4;
+}
+
+textarea {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: none;
+    border-top: 1px solid #ddd;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+button#sendMessage {
+    width: 100%;
+    padding: 10px;
+    background: #000000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Avatar Styles */
+.message .avatar {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.message .avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid #0078d4;
+}
+
+/* User's Message Styles */
+.message.user .avatar img {
+    border: 2px solid #4CAF50; /* Green border for user */
+}
+
+button#sendMessage:hover {
+    background: #262727;
+}
+
