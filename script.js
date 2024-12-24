@@ -113,12 +113,12 @@ document.getElementById("sendMessage").addEventListener("click", async () => {
             } else {
                 displayMessage(
                     "Sorry, there was an error processing your message.",
-                    "bot"
+                    "Ravana"
                 );
             }
         } catch (error) {
             console.error("Error:", error);
-            displayMessage("There was an error connecting to the bot.", "bot");
+            displayMessage("Sorry I am off line", "Ravana");
         }
     }
 });
