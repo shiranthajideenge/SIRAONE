@@ -496,3 +496,37 @@ button#sendMessage:hover {
     background: #262727;
 }
 
+#about .founder-info {
+    text-align: center;
+    margin-top: 30px;
+}
+.founder-photo {
+    width: 100px;
+    height: 100px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+}
+.founder-info .founder-photo {
+    width: 100px; /* Adjust the size */
+    height: 100px; /* Equal height for round shape */
+    border-radius: 50%; /* Circular shape */
+    margin-bottom: 15px;
+    object-fit: cover; /* Ensures the image covers the circle evenly */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional subtle shadow */
+}
+
+.founder-info h3 {
+    font-size: 22px; /* Founder name size */
+    color: #003366; /* Color for the name */
+    margin-bottom: 5px;
+}
+
+.founder-info p {
+    font-size: 16px; /* Font size for the description */
+    color: #555;
+    line-height: 1.6;
+    margin: 5px 0;
+}
