@@ -3,9 +3,9 @@ body {
     font-family: 'Open Sans', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #ffffff;
+    color: #000000;
     line-height: 1.6;
-    background-color: #414141;
+    background-color: #ffffff;/*#414141*/
 }
 
 h1, h2, h3 {
@@ -193,6 +193,9 @@ section {
     margin: auto;
     line-height: 1.8;
 }
+#about h2 {
+    color: #ffffff;
+}
 
 /* Service List */
 .service-list {
@@ -307,13 +310,13 @@ section {
 
 .description p {
     margin: 5px 0;
-    color: #d4af37; /* Replace with your desired golden color */
+    color: #ffffff; /* Replace with your desired golden color */
 }
 
 .service-item h3 {
     margin-bottom: 15px;
     font-size: 22px;
-    color: #ffffff;
+    color: #d4af37;
 }
 
 /* Contact Section */
