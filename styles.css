@@ -3,8 +3,9 @@ body {
     font-family: 'Open Sans', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: #ffffff;
     line-height: 1.6;
+    background-color: #414141;
 }
 
 h1, h2, h3 {
@@ -30,15 +31,26 @@ header {
 }
 
 /* For a web-safe cursive font */
-.about-us {
+/*.about-us {
+    background-color: #414141;
     font-family: cursive;
+}*/
+
+#about {
+    background-color: #808080; /* Gray background */
+    padding: 0 0; /* Optional padding for spacing */
+    width: 100%; /* Ensures the section spans full width */
+    box-sizing: border-box; /* Includes padding and border in width and height calculations */
+    text-align: center;
 }
 
-/* Alternatively, if you want to use a custom Google font */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
 .about-us {
     font-family: 'Dancing Script', cursive;
+    background-color: #545454;
+    padding: 40px 40px;
+    box-sizing: border-box;
 }
 
 header .container {
@@ -264,8 +276,9 @@ section {
 
 #services .container {
     width: 100%; /* Ensure the container spans full width */
-    padding: 0 20px; /* Optional: Add padding to avoid content touching edges */
+    padding: 0 5px; /* Optional: Add padding to avoid content touching edges */
     margin: 0 auto;
+    /*background: linear-gradient(135deg, #000000, #000000);*/
 }
 
 #services .service-item {
@@ -505,6 +518,7 @@ footer a:hover {
     border-top-right-radius: 15px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    color: black; /* Set the text color to black */
 }
 
 .message {
@@ -558,10 +572,10 @@ button#sendMessage {
     border: none;
     cursor: pointer;
     font-weight: bold;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 /* Avatar Styles */
