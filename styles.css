@@ -44,20 +44,24 @@ header {
     text-align: center;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
 
 .about-us {
-    font-family: 'Dancing Script', cursive;
+    font-family: Merienda;
     background-color: #545454;
     padding: 40px 40px;
     box-sizing: border-box;
 }
 
+
+
 header .container {
-    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 20px;
+    padding: 0 20px;
     justify-content: space-between;
-    align-items: center;
-    position: relative;
+    display: flex;
 }
 
 header h1 {
