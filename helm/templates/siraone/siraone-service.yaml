@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: siraone-service
+  namespace: {{ .Release.Namespace }}
+spec:
+  selector:
+    deployment: siraone
+    node: siraone
+  ports:
+    - name: frontend
+      protocol: TCP
+      port: 80
+      targetPort: 80
+    - name: backend
+      protocol: TCP
+      port: 5001
+      targetPort: 5001
+    - name: https
+      protocol: TCP
+      port: 443
+      targetPort: 443
+  type: ClusterIP

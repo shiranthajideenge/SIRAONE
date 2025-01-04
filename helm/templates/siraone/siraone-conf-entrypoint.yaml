@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: siraone-conf-entrypoint
+  namespace: {{ .Release.Namespace }}
+data:
+  siraone-entrypoint.sh: |
+    #!/bin/bash
+    set -e
+
+    # Start the Node.js backend and Nginx together
+    node /app/backend/server.js & nginx -g 'daemon off;'
+    tail -f /dev/null

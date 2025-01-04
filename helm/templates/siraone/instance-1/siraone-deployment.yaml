@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: siraone-deployment
+  namespace: {{ .Release.Namespace }}
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      deployment: siraone
+      node: siraone
+  template:
+    metadata:
+      labels:
+        deployment: siraone
+        node: siraone
+    spec:
+      containers:
+        - name: siraone-1
+          image: {{ .Values.siraone.deployment.dockerimage.imageName }}
+          imagePullPolicy: {{ .Values.siraone.deployment.dockerimage.imagePullPolicy }}
+          livenessProbe:
+            exec:
+              command:
+                - cat
+                - /app/backend/server.js
+            initialDelaySeconds: {{ .Values.siraone.deployment.dockerimage.livenessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.siraone.deployment.dockerimage.livenessProbe.periodSeconds }}
+          readinessProbe:
+            exec:
+              command:
+                - cat
+                - /app/backend/server.js
+            initialDelaySeconds: {{ .Values.siraone.deployment.dockerimage.readinessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.siraone.deployment.dockerimage.readinessProbe.periodSeconds }}
+          lifecycle:
+            preStop:
+              exec:
+                command:  ['sh', '-c', '']
+          resources:
+            requests:
+              memory: {{ .Values.siraone.deployment.resources.requests.memory }}
+              cpu: {{ .Values.siraone.deployment.resources.requests.cpu }}
+            limits:
+              memory: {{ .Values.siraone.deployment.resources.limits.memory }}
+              cpu: {{ .Values.siraone.deployment.resources.limits.cpu }}
+          securityContext:
+            runAsUser: 0
+          ports:
+            - containerPort: 80
+              protocol: "TCP"
+            - containerPort: 5001
+              protocol: "TCP"
+          env:
+            - name: NODE_IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP

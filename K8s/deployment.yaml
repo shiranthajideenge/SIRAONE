@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: siraone
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: siraone
+  template:
+    metadata:
+      labels:
+        app: siraone
+    spec:
+      containers:
+      - name: siraone
+        image: shiransilva143/siraone
+        ports:
+        - containerPort: 80
+        - containerPort: 5001
+        livenessProbe:
+          httpGet:
+            path: /home
+            port: 80
+          initialDelaySeconds: 10
+          periodSeconds: 30
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /home
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 10
+          failureThreshold: 3
+        resources:
+          requests:
+            memory: "1Gi"
+            cpu: "500m"
+          limits:
+            memory: "2Gi"
+            cpu: "500m"
