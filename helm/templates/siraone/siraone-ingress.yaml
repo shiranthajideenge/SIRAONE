@@ -25,3 +25,17 @@ spec:
             name: siraone-service
             port:
               number: 80
+      - path: /chat
+        pathType: Prefix
+        backend:
+          service:
+            name: siraone-service
+            port:
+              number: 5001
+      - path: /send-email
+        pathType: Prefix
+        backend:
+          service:
+            name: siraone-service
+            port:
+              number: 5001

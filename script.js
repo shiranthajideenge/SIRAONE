@@ -60,7 +60,7 @@ document.getElementById("contactForm").addEventListener("submit", async (event) 
     const message = document.getElementById("message").value;
 
     try {
-        const response = await fetch("http://35.232.253.217:5001/send-email", {
+        const response = await fetch("http://34.122.41.252:5001/send-email", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -98,7 +98,7 @@ document.getElementById("sendMessage").addEventListener("click", async () => {
 
         // Send message to the server (which will communicate with OpenAI)
         try {
-            const response = await fetch("http://35.232.253.217:5001/chat", {
+            const response = await fetch("http://34.122.41.252:5001/chat", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -141,7 +141,7 @@ async function sendMessage() {
 
         // Send message to the server (which will communicate with OpenAI)
         try {
-            const response = await fetch("http://35.232.253.217:5001/chat", {
+            const response = await fetch("http://34.122.41.252:5001/chat", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
