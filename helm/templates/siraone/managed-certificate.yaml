@@ -1,0 +1,8 @@
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  name: siraone-managed-cert
+spec:
+  domains:
+    - sira.one
+    - www.sira.one  # Optional if you are using www
