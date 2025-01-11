@@ -34,7 +34,7 @@ RUN \
 WORKDIR ${USER_HOME}
 
 COPY backend/ ./backend/
-COPY backend/.env ./backend/
+#COPY backend/.env ./backend/
 
 # Debugging: Show contents of /app/backend
 RUN echo "Contents of /app/backend:" && ls -l ./backend

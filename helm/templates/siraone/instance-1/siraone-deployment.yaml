@@ -58,3 +58,19 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: status.podIP
+                  env:
+            - name: OPENAI_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: my-secret
+                  key: OPENAI_API_KEY
+            - name: EMAIL_USER
+              valueFrom:
+                secretKeyRef:
+                  name: my-secret
+                  key: EMAIL_USER
+            - name: EMAIL_PASS
+              valueFrom:
+                secretKeyRef:
+                  name: my-secret
+                  key: EMAIL_PASS

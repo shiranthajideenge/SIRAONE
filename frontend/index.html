@@ -16,7 +16,6 @@
                 <img src="logo.png" alt="SIRAONE Logo">
                 Software Integration and Reliable Architectures # 1
             </h1>
-            
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -52,7 +51,8 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h2 id="dynamic-text">Empower Your Transformation with SIRAONE</h2>
+            <!--<img src="assets/images/SDIcon.png" alt="Digital Transformation Icon" class="service-icon">-->
+            <h2 id="dynamic-text">  </h2>
             <p>Your Trusted Partner for Software Solutions</p>
             <a href="#services" class="btn">Explore Services</a>
         </div>
@@ -73,95 +73,486 @@
 
     <!-- Services Section -->
 <section id="services">
+    
     <!--<div class="container">-->
         <h2>Our Services</h2>
         <div class="service-list">
-            <div id="software-development" class="service-item">
+            <div id="software-development" class="service-item" onclick="openServiceDetails('softwareDevelopmentPopup')">
                 <div class="icon-description-wrapper">
                     <img src="assets/images/SDIcon.png" alt="Digital Transformation Icon" class="service-icon">
                     <div class="description">
                         <h3>Software Development</h3>
-                        <p>End-to-end software development services for custom solutions, from ideation to delivery, ensuring high-quality, maintainable, and scalable systems.</p>
-                        <!--<p>Our team develops feature-rich applications using modern technologies like Java, C#, and Python.</p>-->
+                        <p>End-to-end software development services for custom solutions, from ideation to delivery, ensuring high-quality, maintainable, and scalable systems</p>
+                        <!--<p>Our team develops feature-rich applications using modern technologies like Java, C#, and Python</p>-->
                     </div>
                 </div>
             </div>
-            <div id="digital-transformation" class="service-item">
+            <div id="digital-transformation" class="service-item" onclick="openServiceDetails('digital-transformationpop')">
                 <div class="icon-description-wrapper">
                     <img src="assets/images/DTIcon.png" alt="Digital Transformation Icon" class="service-icon">
                     <div class="description">
                         <h3>Kubernetes Transformation</h3>
-                        <p>Helping businesses embrace modern technologies, including Docker and Kubernetes deployments, to drive efficiency and scalability.</p>
+                        <p>Helping businesses embrace modern technologies, including Docker and Kubernetes deployments, to drive efficiency and scalability</p>
                     </div>
                 </div>
             </div>
-            <div id="middleware-consultancy" class="service-item">
+            <div id="middleware-consultancy" class="service-item" onclick="openServiceDetails('middleware-integrationpop')">
                 <div class="icon-description-wrapper">
                     <img src="assets/images/chip.png" alt="Digital Transformation Icon" class="service-icon">
                     <div class="description">
                         <h3>Middleware Integration</h3>
-                        <p>Expert advice on optimizing and managing middleware solutions for improved integration and performance.</p>
-                        <!--<p>We specialize in WSO2 products and help you configure, integrate, and maintain middleware platforms tailored to your needs.</p>-->
+                        <p>Expert advice on optimizing and managing middleware solutions for improved integration and performance</p>
+                        <!--<p>We specialize in WSO2 products and help you configure, integrate, and maintain middleware platforms tailored to your needs</p>-->
                     </div>
                 </div>
             </div>
-            <div id="poc-evaluation" class="service-item">
+            <div id="poc-evaluation" class="service-item" onclick="openServiceDetails('poc-project-evaluationpop')">
                 <div class="icon-description-wrapper">
                     <img src="assets/images/process.png" alt="Digital Transformation Icon" class="service-icon">
                     <div class="description">
                         <h3>Proof of Concept (PoC) & Project Evaluation</h3>
-                        <p>Validation of the proposed architecture through PoC to ensure alignment with business objectives.</p>
-                        <!--<p>Our PoC services demonstrate the feasibility of solutions while mitigating risks and optimizing resources.</p>-->
+                        <p>Validation of the proposed architecture through PoC to ensure alignment with business objectives</p>
+                        <!--<p>Our PoC services demonstrate the feasibility of solutions while mitigating risks and optimizing resources</p>-->
                     </div>
                 </div>
             </div>
-            <div id="architecture-design" class="service-item">
+            <div id="architecture-design" class="service-item" onclick="openServiceDetails('solutions-architecturepop')">
                 <div class="icon-description-wrapper">
                     <img src="assets/images/ADIcon.png" alt="Digital Transformation Icon" class="service-icon">
                     <div class="description">
                         <h3>Solutions Architecture</h3>
-                        <p>Tailored solutions leveraging various technologies with a focus on scalability, security, and performance.</p>
-                        <!--<p>We design systems that align with your business goals, ensuring they remain flexible for future growth.</p>-->
+                        <p>Tailored solutions leveraging various technologies with a focus on scalability, security, and performance</p>
+                        <!--<p>We design systems that align with your business goals, ensuring they remain flexible for future growth</p>-->
                     </div>
                 </div>
             </div>
-            <div id="post-implementation-support" class="service-item">
+            <div id="post-implementation-support" class="service-item" onclick="openServiceDetails('post-implementation-supportpop')">
                 <div class="icon-description-wrapper">
                     <img src="assets/images/supoport.png" alt="Digital Transformation Icon" class="service-icon">
                     <div class="description">
                         <h3>Post-Implementation Support</h3>
-                        <p>Optional ongoing support for architectural updates, system enhancements, and performance optimization.</p>
-                        <!--<p>Choose from our subscription plans for continuous improvement and hassle-free maintenance of your systems.</p>-->
+                        <p>Ongoing support for architectural updates, system enhancements, and performance optimization</p>
+                        <!--<p>Choose from our subscription plans for continuous improvement and hassle-free maintenance of your systems</p>-->
                     </div>
                 </div>
             </div>
         </div>
     <!--</div>-->
 </section>
-    
+
+<!-- Pop-up for service details -->
+<!--div id="serviceDetailsPopup" class="service-details-popup">-->
+    <!-- Background video -->
+ <!--   <video autoplay muted loop playsinline class="background-video">
+        <source src="assets/videos/vid3.mov" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="popup-content">
+        <button class="close-btn" onclick="closeServiceDetails()">&times;</button>
+        <div id="popupContent" style="margin-top: 500px;"></div>
+        <img src="assets/images/SDIcon.png" alt="Digital Transformation Icon" class="service-icon">
+    </div>-->
+    <!-- Fixed button outside of the scrollable area -->
+    <!--<button class="contact-us-btn" onclick="scrollToContactUs()">Contact Us</button>
+</div>-->
+
+<div id="softwareDevelopmentPopup" class="service-details-popup">
+    <video autoplay muted loop playsinline class="background-video">
+        <source src="assets/videos/vid2.mov" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="popup-content">
+        <button class="close-btn" onclick="closeServiceDetails('softwareDevelopmentPopup')">&times;</button>
+        <div class="subcategories-grid">
+            <div class="subcategory">
+                <h2>Customized Solutions</h2>
+                <p></p>
+                <!--<p>Designed to fit your specific goals, workflows, and challenges</p>-->
+                <ul>
+                    <li>Scalable and Maintainable Architecture: Grow with ease while ensuring simple maintenance</li>
+                    <li>Agile Development Process: Transparency, flexibility, and fast delivery</li>
+                    <li>Experienced Team: Leveraging the best practices and modern technologies</li>
+                    <li>End-to-End Support: From ideation to deployment and beyond</li>
+                </ul>
+            </div>
+            
+            <div class="subcategory">
+                <h2>Mobile Application Development</h2>
+                <p></p>
+                <!--
+                <p>We build feature-rich, user-friendly mobile applications for both <strong>Android</strong> and <strong>iOS</strong> platforms</p>-->
+                <ul>
+                    <li>Native Android and iOS Development</li>
+                    <li>Cross-Platform Apps using Flutter or React Native</li>
+                    <li>Custom UI/UX Design</li>
+                    <li>Integration with APIs and Backend Systems</li>
+                    <li>App Store Deployment</li>
+                </ul>
+            </div>
+            <div class="subcategory">
+                <h2>Web Application Development</h2>
+                <p></p>
+                <!--<p>Our web applications are designed to be highly interactive, scalable, and secure</p>-->
+                <ul><li>Single-Page Applications (SPA) using React, Angular</li>
+                    <li>Backend Development using Java, Python, or NodeJs</li>
+                    <li>Database Management (SQL, MySQL, PostgreSQL, MongoDB)</li>
+                    <li>Cloud-Integrated Web Solutions (AWS, Azure, GCP)</li>
+                    <li>Secure and Scalable Architectures</li>
+                </ul>
+            </div>
+            <div class="subcategory">
+                <h2>Custom Software Development</h2>
+                <p></p>
+                <!--<p>We design and develop custom solutions tailored to your specific business objectives</p>-->
+                <ul><li>Requirement Analysis and Feasibility Study</li>
+                    <li>Software Design and Architecture</li>
+                    <li>Agile Development with Regular Feedback</li>
+                    <li>Integration with Third-Party Tools and Services</li>
+                    <li>Maintenance and Support</li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    <button class="contact-us-btn" onclick="scrollToContactUs('softwareDevelopmentPopup')">Contact Us</button>
+</div>
+
+<div id="digital-transformationpop" class="service-details-popup">
+    <video autoplay muted loop playsinline class="background-video">
+        <source src="assets/videos/vid3.mov" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="popup-content">
+        <button class="close-btn" onclick="closeServiceDetails('digital-transformationpop')">&times;</button>
+        <div class="subcategories-grid">
+            <div class="subcategory">
+                <h2>End-to-End Kubernetes Deployment</h2>
+                <p></p>
+                <!--<p>We design, deploy, and manage Kubernetes clusters tailored to your business needs. From planning to implementation, we ensure that your applications are optimized for Kubernetes environments</p>-->
+                <ul><li>Kubernetes Cluster Design and Architecture</li>
+                    <li>Custom Helm Charts for Application Deployment</li>
+                    <li>Scalable Infrastructure for Increased Efficiency</li>
+                    <li>Optimized Resource Management</li>
+                    <li>Continuous Integration/Continuous Deployment (CI/CD) Pipelines</li>
+                </ul>
+            </div>
+            
+            <div class="subcategory">
+                <h2>Transform Legacy Systems to Kubernetes</h2>
+                <p></p>
+                <!--<p>If you're looking to migrate your existing non-Kubernetes infrastructure to Kubernetes, we provide comprehensive solutions for smooth and efficient transformation</p>-->
+                <ul><li>Assessment of Current Infrastructure</li>
+                    <li>Containerization of Legacy Applications</li>
+                    <li>Cluster Configuration and Optimization</li>
+                    <li>Seamless Migration with Minimal Downtime</li>
+                    <li>Post-Deployment Support and Monitoring</li>
+                </ul>
+            </div>
+            <div class="subcategory">
+                <h2>Benefits of Kubernetes Transformation</h2>
+                <p></p>
+                <!--<p>Transforming your infrastructure with Kubernetes brings numerous benefits:</p>-->
+                <ul><li>Scalability: Handle increased workloads with ease</li>
+                    <li>Flexibility: Adapt to changing business needs faster</li>
+                    <li>High Availability: Ensure uptime and reliability for mission-critical applications</li>
+                    <li>Cost Efficiency: Optimize resource usage and reduce operational overhead</li>
+                </ul>
+            </div>
+            <div class="subcategory">
+                <h2>Technologies We Use</h2>
+                <p></p>
+                <ul><li><strong>Containerization:</strong> Docker</li>
+                <li><strong>Kubernetes Tools:</strong> Helm, kubectl, Kustomize</li>
+                <li><strong>Cloud Platforms:</strong> AWS, Azure, GCP</li>
+                <li><strong>CI/CD Tools:</strong> Jenkins, GitLab CI, CircleCI</li>
+                <li><strong>Monitoring:</strong> Prometheus, Grafana, ELK Stack</li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    <button class="contact-us-btn" onclick="scrollToContactUs('digital-transformationpop')">Contact Us</button>
+</div>
+<div id="middleware-integrationpop" class="service-details-popup">
+    <video autoplay muted loop playsinline class="background-video">
+        <source src="assets/videos/vid3.mov" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="popup-content">
+        <button class="close-btn" onclick="closeServiceDetails('middleware-integrationpop')">&times;</button>
+        <div class="subcategories-grid">
+            <div class="subcategory">
+                <h2>API Management</h2>
+                <p></p>
+                <!--<p>Design, manage, and secure APIs effectively to enable seamless connectivity between different services and applications</p> -->
+                <ul><li>API Design and Documentation</li> 
+                <li>API Gateway Configuration</li> 
+                <li>Authentication and API Security Configurations</li> 
+                <li>API Analytics and Monitoring</li> 
+                <li>Version Control and Lifecycle Management</li>
+                </ul>
+            </div>
+            
+            <div class="subcategory">
+                <h2>Identity and Access Management</h2>
+                <p></p>
+                <!--<p>Optimize your authentication and authorization processes to ensure secure and scalable identity management solutions</p> -->
+                <ul><li>Single Sign-On (SSO) Integration</li> 
+                <li>Identity Federation and Access Control</li> 
+                <li>Multi-Factor Authentication (MFA)</li> 
+                <li>OAuth2, OpenID Connect, and SAML Configurations</li> 
+                <li>User Provisioning and Role-Based Access Control</li>
+                </ul>
+            </div>
+            <div class="subcategory">
+                <h2>Middleware Architecture Optimization</h2>
+                <p></p>
+                <!--<p>Design and implement robust middleware architectures to maximize data processing efficiency, reduce latency, and scale effectively</p> -->
+                <ul><li>Integration of Heterogeneous Systems</li> 
+                <li>Message Queues and Event-Driven Architecture</li> 
+                <li>Distributed Middleware Solutions</li> 
+                <li>Load Balancing and Fault Tolerance</li> 
+                <li>High Availability and Disaster Recovery Plans</li>
+                </ul>
+
+            </div>
+            <div class="subcategory">
+                <h2>Technologies We Use</h2>
+                <p></p>
+                <ul><li><strong>Middleware Platforms:</strong> API Gateways, Identity Management Systems</li> 
+                <li><strong>Integration Tools:</strong> Apache Kafka, RabbitMQ, ActiveMQ</li> 
+                <li><strong>Cloud & DevOps:</strong> AWS, GCP, Azure, Docker, Kubernetes</li> 
+                <li><strong>Security:</strong> OAuth2, OpenID Connect, SAML, LDAP</li> 
+                <li><strong>Performance Monitoring:</strong> Prometheus, Grafana, ELK Stack</li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    <button class="contact-us-btn" onclick="scrollToContactUs('middleware-integrationpop')">Contact Us</button>
+</div>
+
+<div id="poc-project-evaluationpop" class="service-details-popup">
+    <video autoplay muted loop playsinline class="background-video">
+        <source src="assets/videos/vid3.mov" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="popup-content">
+        <button class="close-btn" onclick="closeServiceDetails('poc-project-evaluationpop')">&times;</button>
+        <div class="subcategories-grid">
+            <div class="subcategory">
+                <h2>Proof of Concept (PoC) Development</h2>
+                <p></p>
+                <!--<p>Our PoC services are designed to help you test the feasibility of your concepts, technology stacks, and ideas in a controlled environment, reducing risks and making informed decisions</p>-->
+                <ul><li>Rapid Prototyping of Ideas and Concepts</li>
+                    <li>Technology and Tool Selection for the PoC</li>
+                    <li>Real-World Use Case Testing</li>
+                    <li>Demonstration of Key Features and Capabilities</li>
+                    <li>Feedback Collection and Iteration for Improvement</li>
+                </ul>
+            </div>
+            
+            <div class="subcategory">
+                <h2>Project Evaluation</h2>
+                <p></p>
+                <!--<p>We perform thorough evaluations of your project to assess feasibility, risks, and alignment with business objectives. Our evaluations provide you with actionable insights and a clear path forward</p>-->
+                <ul><li>Detailed Feasibility Study and Risk Analysis</li>
+                    <li>Technology Stack Review and Recommendation</li>
+                    <li>Evaluation of Existing Architecture and Infrastructure</li>
+                    <li>Cost-Benefit Analysis and Resource Requirements</li>
+                    <li>Assessment of Scalability, Performance, and Security</li>
+                </ul>
+            </div>
+            <div class="subcategory">
+                <h2>Solution Design and Architecture</h2>
+                <p></p>
+                <!--<p>We assist in designing a robust and scalable architecture based on the results of the PoC and project evaluation, ensuring that the solution is optimized for both current needs and future growth</p>-->
+                <ul>Architecture Design and Validation</li>
+                <li>Cloud-Native Architecture and Microservices Design</li>
+                <li>Scalable and High-Performance Solution Design</li>
+                <li>Cost Optimization and Cloud Infrastructure Setup</li>
+                <li>Security and Compliance Design</li>
+                </ul>
+            </div>
+            <div class="subcategory">
+                <h2>Technology and Vendor Selection</h2>
+                <p></p>
+                <!--<p>Our PoC and project evaluations help you make informed decisions about the technologies and vendors that best suit your requirements, minimizing implementation risks and optimizing performance</p>-->
+                <ul><li>Evaluation of Technology Options and Compatibility</li>
+                <li>Vendor Assessment and Recommendation</li>
+                <li>Open-Source vs. Commercial Software Analysis</li>
+                <li>Integration with Third-Party Tools and Services</li>
+                <li>Long-Term Viability and Support Considerations</li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    <button class="contact-us-btn" onclick="scrollToContactUs('poc-project-evaluationpop')">Contact Us</button>
+</div>
+
+<div id="solutions-architecturepop" class="service-details-popup">
+    <video autoplay muted loop playsinline class="background-video">
+        <source src="assets/videos/vid3.mov" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="popup-content">
+        <button class="close-btn" onclick="closeServiceDetails('solutions-architecturepop')">&times;</button>
+        <div class="subcategories-grid">
+            <div class="subcategory">
+                <h2>Architectural Design & Strategy</h2>
+                <p></p>
+                <!--<p>Our architects work closely with your teams to define a clear, future-proof strategy for your systems. We design flexible architectures that can evolve with your business, ensuring both short-term and long-term success</p>-->
+                <ul><li>Customized Architecture Design to Fit Your Business</li>
+                    <li>Cloud-Native Architecture, Microservices, and Serverless Design</li>
+                    <li>Data-Driven Solutions: Focused on scalability, performance, and data security</li>
+                    <li>Design for High Availability and Disaster Recovery</li>
+                    <li>Integration of Existing Systems into a Unified Architecture</li>
+                    </ul>
+            </div>
+            
+            <!--<div class="subcategory">
+                <h2>Cloud Architecture</h2>
+                <p>Our cloud architecture services help you build and optimize cloud-based systems, leveraging platforms such as AWS, Azure, and GCP. We ensure that your infrastructure is both cost-efficient and high-performing</p>
+                    <li>Cloud-Native Applications & Services Design</li>
+                    <li>Multi-Cloud and Hybrid Cloud Solutions</li>
+                    <li>Cloud Infrastructure Management with Cost Optimization</li>
+                    <li>Security and Compliance Design for Cloud Environments</li>
+                    <li>Serverless and Containerized Solutions using Kubernetes and Docker</li>
+            </div>-->
+            <div class="subcategory">
+                <h2>Solution Design and Architecture</h2>
+                <p></p>
+                <!--<p>We assist in designing a robust and scalable architecture based on the results of the PoC and project evaluation, ensuring that the solution is optimized for both current needs and future growth</p>-->
+                <ul><li>Architecture Design and Validation</li>
+                <li>Cloud-Native Architecture and Microservices Design</li>
+                <li>Scalable and High-Performance Solution Design</li>
+                <li>Cost Optimization and Cloud Infrastructure Setup</li>
+                <li>Security and Compliance Design</li>
+                </ul>
+            </div>
+            <div class="subcategory">
+                <h2>System Integration</h2>
+                <p></p>
+                <!--<p>We integrate various systems and applications into a cohesive ecosystem, ensuring seamless data flow and communication across your enterprise architecture</p>-->
+                <ul><li>Integration of On-Premise and Cloud-Based Systems</li>
+                    <li>API-First Architecture for Seamless Integrations</li>
+                    <li>Middleware Solutions for Efficient Communication</li>
+                    <li>Legacy System Integration with Modern Architectures</li>
+                    <li>Data Integration and ETL Pipelines</li>
+                    </ul>
+            </div>
+            <div class="subcategory">
+                <h2>Scalability & Performance</h2>
+                <p></p>
+                <!--<p>Our architectural solutions are designed to scale seamlessly as your business grows, ensuring optimal performance and cost-efficiency at every stage</p>-->
+                <ul><li>Auto-Scaling Architectures with Cloud Platforms</li>
+                    <li>Load Balancing and Performance Tuning</li>
+                    <li>Optimizing Latency and Throughput</li>
+                    <li>Cost-Effective Scaling with Serverless and Containerized Solutions</li>
+                    <li>Monitoring and Analytics for Continuous Improvement</li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+    <button class="contact-us-btn" onclick="scrollToContactUs('solutions-architecturepop')">Contact Us</button>
+</div>
+
+<div id="post-implementation-supportpop" class="service-details-popup">
+    <video autoplay muted loop playsinline class="background-video">
+        <source src="assets/videos/vid3.mov" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="popup-content">
+        <button class="close-btn" onclick="closeServiceDetails('post-implementation-supportpop')">&times;</button>
+        <div class="subcategories-grid">
+            <div class="subcategory">
+                <h2>Ongoing Maintenance & Monitoring</h2>
+                <p></p>
+                <!--<p>Our team provides continuous monitoring and proactive maintenance to ensure optimal system performance. We address issues before they impact your business, ensuring maximum uptime and smooth operation</p>-->
+                <ul><li>24/7 System Monitoring for Early Issue Detection</li>
+                    <li>Performance Tuning and Optimization</li>
+                    <li>Proactive Patching and Security Updates</li>
+                    <li>Database and Infrastructure Health Checks</li>
+                    <li>Custom Alerts and Reporting</li>
+                    </ul>
+            </div>
+            
+            <div class="subcategory">
+                <h2>Bug Fixing and Issue Resolution</h2>
+                <p></p>
+                <!--<p>Our support services are designed to quickly identify and resolve any issues that arise in your production environment. Whether it’s a bug, performance issue, or system failure, we work tirelessly to ensure your systems remain reliable and efficient</p>-->
+                <ul><li>Root Cause Analysis for Incident Management</li>
+                    <li>Swift Resolution of Bugs and System Failures</li>
+                    <li>Comprehensive Debugging and Issue Tracking</li>
+                    <li>Ensuring Minimal Disruption to Business Operations</li>
+                    </ul>
+            </div>
+            <!--<div class="subcategory">
+                <h2>System Upgrades & Enhancements</h2>
+                <p>As your business evolves, so should your systems. We provide ongoing upgrades and enhancements to ensure your software remains up-to-date with new features, security patches, and performance improvements</p>
+                    <li>Seamless Software Upgrades and Version Migration</li>
+                    <li>New Feature Implementation and Customization</li>
+                    <li>UI/UX Enhancements Based on User Feedback</li>
+                    <li>Integrating New Technologies and Solutions</li>
+                    <li>System Scalability Enhancements</li>
+            </div>-->
+            <div class="subcategory">
+                <h2>Technical Support & Consultation</h2>
+                <p></p>
+                <!--<p>Our team is always available for technical assistance and consultation to help you navigate any challenges or adjustments required post-deployment. Whether it's troubleshooting or expanding your system capabilities, we offer the expertise you need</p>-->
+                <ul><li>Responsive Technical Support and Issue Resolution</li>
+                    <li>Consultation for System Tweaks and Enhancements</li>
+                    <li>Advisory Services for System Scaling and Optimization</li>
+                    <li>Training for Your Internal Teams</li>
+                    <li>Best Practices for System Usage and Management</li>
+                    </ul>
+            </div>
+            <div class="subcategory">
+                <h2>Service Level Agreements</h2>
+                <p></p>
+                <!--<p>We offer tailored Service Level Agreements (SLAs) to match your business needs. Our SLAs ensure that you receive the appropriate level of support, with guaranteed response times and resolution targets to minimize any impact on your operations</p>-->
+                <ul><li>Custom SLAs to Meet Your Business Needs</li>
+                    <li>Guaranteed Response and Resolution Times</li>
+                    <li>Dedicated Support Teams for Critical Issues</li>
+                    <li>Priority Support for Urgent Cases</li>
+                    <li>Regular Reporting and Performance Metrics</li>
+                    </ul>
+            </div>
+            
+        </div>
+    </div>
+    <button class="contact-us-btn" onclick="scrollToContactUs('post-implementation-supportpop')">Contact Us</button>
+</div>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <form id="contactForm" action="" method="post">
-                <label for="name">Name:</label>
-                <textarea id="name" name="name" rows="1" required></textarea>
+<section id="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form id="contactForm" action="" method="post">
+            <label for="name">Name:</label>
+            <textarea id="name" name="name" rows="1" required></textarea>
     
-                <label for="email">Email:</label>
-                <textarea id="email" name="email" rows="1" required></textarea>
+            <label for="email">Email:</label>
+            <textarea id="email" name="email" rows="1" required></textarea>
     
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
     
-                <button type="submit" class="btn">Send</button>
-            </form>
-        </div>
-    </section>
-    
-    
-        
-    </section>
+            <button type="submit" class="btn">Send</button>
+        </form>
+    </div>
+</section>
+
+
+
     <!-- Chatbot Floating Icon and Chatbox -->
     <!-- Floating Chat Icon -->
     <div id="chatIcon" class="chat-icon">

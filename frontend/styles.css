@@ -14,7 +14,7 @@ h1, h2, h3 {
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    /*max-width: 2000px;*/
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -48,12 +48,10 @@ header {
 
 .about-us {
     font-family: Merienda;
-    background-color: #545454;
-    padding: 40px 40px;
+    background-color: #ffffff;/*#545454;*/
+    padding: 20px 0px;
     box-sizing: border-box;
 }
-
-
 
 header .container {
     width: 100%;
@@ -97,7 +95,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background: #c7a602;
+    background: #ff9900;
 }
 
 /* Hamburger Button */
@@ -152,7 +150,7 @@ nav ul li a:hover {
 @keyframes fadeInUp {
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
     }
 }
 
@@ -201,11 +199,11 @@ section {
     color: #ffffff;
 }
 #about h3 {
-    color: #ffffff;
+    color: #000000;
     font-size: 22px;
 }
 #about h1 {
-    color: #ffffff;
+    color: #000000;
 }
 /* Service List */
 .service-list {
@@ -224,6 +222,95 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
+/* Service list */
+/*.service-item {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+}*/
+
+/* Pop-up */
+.service-details-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent dark background */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+
+.popup-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 85%;
+    max-width: 1500px;
+    max-height: 800px;
+    background: #1a1a1a; /* Match the dark theme */
+    color: rgb(255, 254, 254);
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    z-index: 9999;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    /*animation: backgroundAnimation 5s infinite;*/
+}
+
+.popup-content h3 {
+    margin-top: 0;
+    color: #ff9900; /* Match the SIRAONE theme */
+}
+
+.popup-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.close-btn {
+
+    position: absolute; /* Position relative to the popup container */
+    top: 10px; /* Adjust as needed */
+    right: 40px; /* Adjust as needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    color: white; /* Text color */
+    border: none; /* Remove default button border */
+    border-radius: 50%; /* Make it circular */
+    width: 40px; /* Size of the button */
+    height: 40px; /* Size of the button */
+    font-size: 24px; /* Close icon size */
+    cursor: pointer; /* Pointer cursor on hover */
+    z-index: 1000; /* Ensure it's on top of other elements */
+    display: flex; /* Center the "X" */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    transition: transform 0.3s ease;
+}
+
+.close-btn:hover {
+    transform: scale(1.3);
+    background-color:#ff9900;
+}
+
 /* General Styling */
 /*.service-item {
     padding: 20px;
@@ -315,7 +402,7 @@ section {
 .description h3 {
     margin: 0;
     font-size: 1.5em; /* Adjust for heading size */
-    color: #d4af37; /* Replace with your desired golden color */
+    color: #ff9900; /* Replace with your desired golden color */
 }
 
 .description p {
@@ -326,7 +413,7 @@ section {
 .service-item h3 {
     margin-bottom: 15px;
     font-size: 22px;
-    color: #d4af37;
+    color: #ff9900;
 }
 
 /* Contact Section */
@@ -360,7 +447,7 @@ section {
 }
 
 #contact button:hover {
-    background: #c7a602;
+    background: #ff9900;
 }
 
 /* Footer */
@@ -612,7 +699,7 @@ button#sendMessage {
 }
 
 button#sendMessage:hover {
-    background: #c7a602;
+    background: #ff9900;
 }
 
 #about .founder-info {
@@ -649,3 +736,164 @@ button#sendMessage:hover {
     line-height: 1.6;
     margin: 5px 0;
 }
+
+.contact-us-btn {
+    position: absolute;
+    bottom: 10px; /* Adjust distance from bottom as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+    padding: 10px;
+    background: #000000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.contact-us-btn:hover {
+    background-color: #ff9900; /* Hover effect */
+}
+
+/* Add keyframes for background animation */
+@keyframes backgroundAnimation {
+    0% {
+        background-color: #000000; /* Light color at the start */
+    }
+    50% {
+        background-color: #303233; /* Lighter blue in the middle */
+    }
+    100% {
+        background-color: #0d171f; /* Darker blue at the end */
+    }
+}
+
+/* Video background styling */
+.video-background iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Ensures the video covers the entire background */
+    z-index: -1;  /* Puts the video behind the content */
+}
+
+/* Popup Video Background */
+.popup-video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 8px; /* Optional: Adjust as needed for rounded corners */
+}
+
+.popup-video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    object-fit: cover; /* Ensures the video covers the container without distortion */
+    z-index: -1; /* Places the video behind the content */
+}
+
+/* Styling for the background video */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire container */
+    z-index: -1; /* Places the video behind the content */
+}
+
+.subcategories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Increase the min-width to 300px */
+    gap: 30px; /* Adjust the gap between grid items */
+    margin-top: 20px;
+    width: 100%; /* Ensure the grid takes up the full available width */
+    padding: 0 20px; /* Add some padding for better spacing */
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+.subcategories-grid1 {
+    display: grid;
+    grid-template-columns: repeat(1fr, 1); /* Increase the min-width to 300px */
+    gap: 30px; /* Adjust the gap between grid items */
+    margin-top: 20px;
+    width: 100%; /* Ensure the grid takes up the full available width */
+    padding: 0 20px; /* Add some padding for better spacing */
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+@media (max-width: 768px) {
+    .subcategories-grid {
+        grid-template-columns: 1fr; /* Switch to a single column */
+    }
+}
+
+.subcategory {
+    background-color: rgba(18, 17, 17, 0.8); /* Keep the same background */
+    padding: 20px; /* Increase padding for better content spacing */
+    border-radius: 10px; /* Slightly larger border radius for smoother corners */
+    text-align: center; /* Center-align the text for better aesthetics */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Stronger shadow for better contrast */
+    border-radius: 10px;
+    padding: 25px;
+    flex: 1 1 calc(33.333% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: pop 2s ease-in-out;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0.4);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.02);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.subcategory:hover {
+    transform: scale(1.05);
+}
+
+
+.subcategory h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.subcategory p {
+    font-size: 20px;
+    margin: 10px 5 5;
+}
+
+.subcategory ul {
+    text-align: center; /* Center-align the list content */
+    list-style-position: inside; /* Keeps bullets aligned to the left */
+}
+
+.subcategory ul li {
+    line-height: 2; /* Increases line spacing */
+    text-align: left; /* Ensures text inside each list item is left-aligned */
+    width: 100%; /* Ensures each item takes the full width for alignment */
+}
+
